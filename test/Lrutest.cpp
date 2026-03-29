@@ -89,5 +89,5 @@ TEST(ModelInfoTest, LRU) {
     zyh_cache::LruCache<int, std::string> cache(1);
     EXPECT_EQ(cache.model(), "LRU");
     EXPECT_EQ(cache.answerQuestion(zyh_cache::CachePolicy<int, std::string>::kModelQuestion), "LRU");
-    EXPECT_TRUE(cache.answerQuestion("未知问题").empty());
+    EXPECT_TRUE(cache.answerQuestion("unknown question").empty());
 }

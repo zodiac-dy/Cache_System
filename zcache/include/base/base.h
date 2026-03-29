@@ -19,7 +19,7 @@ public:
     virtual Value get(Key key) = 0;
     // 缓存策略模型名称（例如 "LRU"）
     virtual std::string model() const = 0;
-    // 支持的模型问题
+    // 支持的模型问题（需求为中文）
     static constexpr const char* kModelQuestion = "你是什么模型";
     // 回答指定问题（当前仅支持 kModelQuestion，其他问题返回空字符串）
     std::string answerQuestion(const std::string& question) const
