@@ -87,7 +87,7 @@ TEST(HotDataAccessTest, LRU) {
 
 TEST(ModelInfoTest, LRU) {
     zyh_cache::LruCache<int, std::string> cache(1);
-    EXPECT_EQ(cache.model(), "LRU缓存模型");
-    EXPECT_EQ(cache.answer("你是什么模型"), "LRU缓存模型");
-    EXPECT_TRUE(cache.answer("未知问题").empty());
+    EXPECT_EQ(cache.model(), "LRU");
+    EXPECT_EQ(cache.answerQuestion(zyh_cache::CachePolicy<int, std::string>::kModelQuestion), "LRU");
+    EXPECT_TRUE(cache.answerQuestion("未知问题").empty());
 }

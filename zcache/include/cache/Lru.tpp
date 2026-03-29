@@ -55,7 +55,7 @@ Value LruCache<Key, Value>::get(Key key)
 template<typename Key, typename Value>
 std::string LruCache<Key, Value>::model() const
 {
-    return "LRU缓存模型";
+    return "LRU";
 }
 
 template<typename Key, typename Value>
