@@ -53,6 +53,12 @@ Value LruCache<Key, Value>::get(Key key)
 }
 
 template<typename Key, typename Value>
+std::string LruCache<Key, Value>::model() const
+{
+    return "LRU缓存模型";
+}
+
+template<typename Key, typename Value>
 void LruCache<Key, Value>::remove(Key key)
 {
     std::lock_guard<std::mutex> lock(mutex_);

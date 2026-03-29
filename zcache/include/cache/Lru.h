@@ -64,6 +64,8 @@ public:
 
     Value get(Key key) override;
 
+    std::string model() const override;
+
     // 删除指定元素
     void remove(Key key);
 
